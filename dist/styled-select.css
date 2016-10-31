@@ -1,0 +1,51 @@
+select {
+
+	/* Functional */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12"><path d="M4 12l4-5H0m4-7l4 5H0" fill="%23bbb" fill-rule="evenodd"/></svg>' );
+	background-repeat: no-repeat;
+	border: 1px solid;
+	padding-top: 1.5px;
+	padding-bottom: 0;
+	text-overflow: ellipsis;
+
+	/* Styling */
+	background-color: white;
+	background-position: right 0.75em center;
+	border-color: #ddd;
+	border-radius: 3px;
+	height: 40px;
+	padding-right: 2em;
+	-webkit-padding-end: 2em;
+	padding-left: 0.75em;
+	-webkit-padding-start: 0.75em;
+	font-size: 16px;
+	font-size: 1rem;
+
+}
+select::-ms-expand {
+
+	/* Functional */
+	display: none;
+
+}
+select:hover,
+select:active,
+select:focus {
+
+	/* Functional */
+	background-image: url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12"><path d="M4 12l4-5H0m4-7l4 5H0" fill="%23333" fill-rule="evenodd"/></svg>' );
+
+}
+option {
+
+	/* Functional */
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	/* Styling */
+	padding: 12px 0.75em;
+
+}

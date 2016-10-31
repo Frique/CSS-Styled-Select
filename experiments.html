@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>CSS-Styled-Selects</title>
+
+<style>
+	.appearancenone {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+	.appearancenone::-ms-expand {
+		display: none; /* Hides the native arrow in IE */
+	}
+	.resets {
+		font-family: sans-serif;
+		background: none;
+		border: 1px solid #ddd;
+		height: 40px;
+		padding: 0 0.75em;
+		-webkit-padding-end: 0.75em; /* iOS */
+    	-webkit-padding-start: 0.75em; /* iOS */
+		border-radius: 2px;
+		font-size: 1rem;
+		padding-top: 1.5px; /* Vertical aligning of the text. Depends on the font/font-size what the right number is. Compare chrome with firefox to find a good middleground. */
+	}
+	.resets option {
+		padding: 12px 0.75em; /* Firefox */
+	}
+	.arrow {
+		padding-right: 2em;
+		-webkit-padding-end: 2em; /* iOS */
+		background-image: url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12"><path d="M4 12l4-5H0m4-7l4 5H0" fill="%23bbb" fill-rule="evenodd"/></svg>' );
+		background-repeat: no-repeat;
+		background-position: right 0.75em center;
+	}
+	.arrow:hover,
+	.arrow:active,
+	.arrow:focus {
+		background-image: url( 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12"><path d="M4 12l4-5H0m4-7l4 5H0" fill="%23333" fill-rule="evenodd"/></svg>' );
+	}
+	.overflow {
+		max-width: 200px;
+		text-overflow: ellipsis;
+	}
+	.overflow option {
+	    max-width: 200px;
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	}
+</style>
+
+<h2>1. This one has no styling. It will use the browser's native select control styling.</h2>
+<p>
+	<select>
+		<option>No styling</option>
+		<option>Second option</option>
+	</select>
+</p>
+
+<h2>2. This one only has appearance:none applied. Still appears different along browsers.</h2>
+<p>
+	<select class="appearancenone">
+		<option>Appearance none</option>
+		<option>Second option</option>
+	</select>
+</p>
+
+<h2>3. This one has some consistent styling resets.</h2>
+<p>
+	<select class="appearancenone resets">
+		<option>Resets</option>
+		<option>Second option</option>
+	</select>
+</p>
+
+<h2>4. Here we add arrows.</h2>
+<p>
+	<select class="appearancenone resets arrow">
+		<option>Arrow</option>
+		<option>Second option</option>
+	</select>
+</p>
+
+<h2>5. Allow for an elegant overflow when space is too narrow.</h2>
+<p>
+	// Currently the ellipsis only show in Firefox.
+</p>
+<p>
+	<select class="appearancenone resets arrow overflow">
+		<option>A max-width of 200px with overflow: ellipsis</option>
+		<option>Second option</option>
+	</select>
+</p>
