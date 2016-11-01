@@ -2,6 +2,27 @@
 <meta charset="utf-8">
 <title>CSS-Styled-Selects</title>
 <link rel="stylesheet" href="dist/styled-select.css">
+<style>
+	body {
+		margin: 2em;
+		background: #f8f8f8;
+	}
+	.alternative-styling {
+		font-family: courier, monospace;
+		color: #555;
+		font-size: 1.25em;
+		border-color: #ccc;
+		border-width: 2px;
+		border-radius: 0.25em;
+		background-size: 0.6em;
+		height: 3em;
+		padding: 0;
+		padding-left: 1em;
+		-webkit-padding-start: 1em;
+		padding-right: 2.5em;
+		-webkit-padding-end: 2.5em;
+	}
+</style>
 
 <h2>1. This has the CSS applied. Should look pretty much the same across browsers.</h2>
 <p>
@@ -24,5 +45,13 @@
 	<select style="max-width: 100px;">
 		<option style="max-width: 100px;">CSS Styled Select</option>
 		<option style="max-width: 100px;">Second option</option>
+	</select>
+</p>
+
+<h2>4. Alternative styling</h2>
+<p>
+	<select class="alternative-styling">
+		<option>CSS Styled Select</option>
+		<option>Second option</option>
 	</select>
 </p>
