@@ -13,7 +13,9 @@ Functionality and style are separated in the CSS to allow for easy customization
 The arrow is a homemade SVG file of 2 triangles (see attached .svg file), minified through https://jakearchibald.github.io/svgomg/ and encoded via http://dopiaza.org/tools/datauri/index.php to make it work in IE9+ and Firefox. Base64 encoding would work fine but it makes the snippet a bit longer. To change the arrow's color, change the #ddd in the SVG file to your preferred color and re-encode it before pasting it into your CSS.
 
 ## Browser support
-* IE9+ (untested)
+* IE9+ (partial)
+* IE10+ (complete)
+* Modern browsers
 
 ## Todo
 * Add browser screenshots
